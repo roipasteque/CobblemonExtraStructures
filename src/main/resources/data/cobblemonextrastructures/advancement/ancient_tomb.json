@@ -1,0 +1,46 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:iron_block"
+    },
+    "title": {
+      "translate": "advancement.cobblemonextrastructures.ancient_tomb.title",
+      "fallback": "Iron age"
+    },
+    "description": {
+      "translate": "advancement.cobblemonextrastructures.ancient_tomb.description",
+      "fallback": "Step in the Ancient tomb."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "cobblemonextrastructures:golems",
+  "criteria": {
+    "ancient_tomb": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": [
+                  "cobblemonextrastructures:ancient_tomb"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ancient_tomb"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

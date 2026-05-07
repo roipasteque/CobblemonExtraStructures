@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:red_plaque"
+    },
+    "title": {
+      "translate": "advancement.cobblemonextrastructures.origin_tomb.title",
+      "fallback": "The earth"
+    },
+    "description": {
+      "translate": "advancement.cobblemonextrastructures.origin_tomb.description",
+      "fallback": "Find the Origin tomb."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "cobblemonextrastructures:sky_pillar",
+  "criteria": {
+    "origin_tomb": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "cobblemonextrastructures:origin_tomb"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "origin_tomb"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

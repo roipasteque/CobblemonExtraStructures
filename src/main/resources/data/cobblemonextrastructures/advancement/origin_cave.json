@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:blue_plaque"
+    },
+    "title": {
+      "translate": "advancement.cobblemonextrastructures.origin_cave.title",
+      "fallback": "The ocean"
+    },
+    "description": {
+      "translate": "advancement.cobblemonextrastructures.origin_cave.description",
+      "fallback": "Find the Origin cave."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "cobblemonextrastructures:sky_pillar",
+  "criteria": {
+    "origin_cave": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "cobblemonextrastructures:origin_cave"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "origin_cave"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

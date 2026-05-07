@@ -1,0 +1,41 @@
+{
+  "processors": [
+    {
+      "processor_type": "minecraft:rule",
+      "rules": [
+        {
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "input_predicate": {
+            "block": "minecraft:pointed_dripstone",
+            "probability": 1.0,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "output_state": {
+            "Name": "minecraft:pointed_dripstone",
+            "Properties": {
+              "waterlogged": "false"
+            }
+          }
+        },
+        {
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "input_predicate": {
+            "block": "cobblemon:black_tumblestone_cluster",
+            "probability": 1.0,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "output_state": {
+            "Name": "cobblemon:black_tumblestone_cluster",
+            "Properties": {
+              "waterlogged": "false"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

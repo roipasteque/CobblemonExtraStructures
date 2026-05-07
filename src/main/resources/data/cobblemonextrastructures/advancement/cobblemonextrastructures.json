@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:spyglass"
+    },
+    "title": {
+      "translate": "advancement.cobblemonextrastructures.cobblemonextrastructures.title"
+    },
+    "description": {
+      "translate": "advancement.cobblemonextrastructures.cobblemonextrastructures.description"
+    },
+    "background": "cobblemonextrastructures:textures/gui/advancements/backgrounds/cobblemonextrastructures.png",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "picked_starter": {
+      "trigger": "cobblemon:pick_starter"
+    }
+  },
+  "sends_telemetry_event": false
+}

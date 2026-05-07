@@ -1,0 +1,15 @@
+{
+  "name": "cobblemonextrastructures:dragons_den",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cobblemonextrastructures:dragons_den",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:fossilized_fish"
+    },
+    "title": {
+      "translate": "advancement.cobblemonextrastructures.sea_mauville.title",
+      "fallback": "Sea Mauville"
+    },
+    "description": {
+      "translate": "advancement.cobblemonextrastructures.sea_mauville.description",
+      "fallback": "Find shipwreck of Sea Mauville"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "cobblemonextrastructures:cobblemonextrastructures",
+  "criteria": {
+    "sea_mauville": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "cobblemonextrastructures:sea_mauville"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "sea_mauville"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

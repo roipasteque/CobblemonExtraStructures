@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:safety_goggles"
+    },
+    "title": {
+      "translate": "advancement.cobblemonextrastructures.outskirt_stand.title",
+      "fallback": "Outskirt Stand"
+    },
+    "description": {
+      "translate": "advancement.cobblemonextrastructures.outskirt_stand.description",
+      "fallback": "Find the outskirt stand."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "cobblemonextrastructures:cobblemonextrastructures",
+  "criteria": {
+    "outskirt_stand": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "cobblemonextrastructures:outskirt_stand"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "outskirt_stand"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

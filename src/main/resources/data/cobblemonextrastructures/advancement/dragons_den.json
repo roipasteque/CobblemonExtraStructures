@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:dragon_fang"
+    },
+    "title": {
+      "translate": "advancement.cobblemonextrastructures.dragons_den.title",
+      "fallback": "Dragon's den"
+    },
+    "description": {
+      "translate": "advancement.cobblemonextrastructures.dragons_den.description",
+      "fallback": "Find the dragon's den."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "cobblemonextrastructures:cobblemonextrastructures",
+  "criteria": {
+    "dragons_den": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "cobblemonextrastructures:dragons_den"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "dragons_den"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

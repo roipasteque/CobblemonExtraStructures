@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:poke_rod"
+    },
+    "title": {
+      "translate": "advancement.cobblemonextrastructures.fishing_hut.title",
+      "fallback": "Fishing hut"
+    },
+    "description": {
+      "translate": "advancement.cobblemonextrastructures.fishing_hut.description",
+      "fallback": "Find the fishing hut."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "cobblemonextrastructures:cobblemonextrastructures",
+  "criteria": {
+    "fishing_hut": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "cobblemonextrastructures:fishing_hut"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "fishing_hut"
+    ]
+  ],
+  "sends_telemetry_event": false
+}
