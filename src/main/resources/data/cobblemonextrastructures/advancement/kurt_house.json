@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:fast_ball"
+    },
+    "title": {
+      "translate": "advancement.cobblemonextrastructures.kurt_house.title",
+      "fallback": "Kurt's house"
+    },
+    "description": {
+      "translate": "advancement.cobblemonextrastructures.kurt_house.description",
+      "fallback": "Find kurt's house."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "cobblemonextrastructures:cobblemonextrastructures",
+  "criteria": {
+    "kurt_house": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "cobblemonextrastructures:kurt_house"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kurt_house"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

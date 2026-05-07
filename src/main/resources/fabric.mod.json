@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "cobblemonextrastructures",
+	"version": "${version}",
+	"name": "Cobblemon Extra Structures",
+	"description": "An addon for Cobblemon adding structures",
+	"authors": [
+		"Roi Pasteque"
+	],
+	"contact": {
+	},
+	"license": "All Rights Reserved",
+	"icon": "logo.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.pastek.cobblemonextrastructures.ExtraStructures"
+		],
+		"fabric-datagen": [
+			"net.pastek.cobblemonextrastructures.CobblemonExtraStructuresDataGenerator"
+		],
+		"client": [
+			"net.pastek.cobblemonextrastructures.CESClient"
+		]
+	},
+	"mixins": [
+		"cobblemonextrastructures.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

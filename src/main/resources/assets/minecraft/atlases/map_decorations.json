@@ -1,0 +1,27 @@
+{
+  "sources": [
+    {
+      "type": "single",
+      "resource": "cobblemonextrastructures:map/decorations/sprout_tower",
+      "sprite": "cobblemonextrastructures:map/decorations/sprout_tower"
+    },
+
+    {
+      "type": "single",
+      "resource": "cobblemonextrastructures:map/decorations/desert_ruins",
+      "sprite": "cobblemonextrastructures:map/decorations/desert_ruins"
+    },
+
+    {
+      "type": "single",
+      "resource": "cobblemonextrastructures:map/decorations/ancient_tomb",
+      "sprite": "cobblemonextrastructures:map/decorations/ancient_tomb"
+    },
+
+    {
+      "type": "single",
+      "resource": "cobblemonextrastructures:map/decorations/island_cave",
+      "sprite": "cobblemonextrastructures:map/decorations/island_cave"
+    }
+  ]
+}

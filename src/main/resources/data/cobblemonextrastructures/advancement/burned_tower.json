@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:charcoal"
+    },
+    "title": {
+      "translate": "advancement.cobblemonextrastructures.burned_tower.title",
+      "fallback": "Burned Tower"
+    },
+    "description": {
+      "translate": "advancement.cobblemonextrastructures.burned_tower.description",
+      "fallback": "Find the Burned Tower."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "cobblemonextrastructures:bell_tower",
+  "criteria": {
+    "burned_tower": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "cobblemonextrastructures:burned_tower"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "burned_tower"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

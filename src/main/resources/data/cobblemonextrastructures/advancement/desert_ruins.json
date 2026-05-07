@@ -1,0 +1,46 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:stone"
+    },
+    "title": {
+      "translate": "advancement.cobblemonextrastructures.desert_ruins.title",
+      "fallback": "Stone age"
+    },
+    "description": {
+      "translate": "advancement.cobblemonextrastructures.desert_ruins.description",
+      "fallback": "Step in the Desert ruins."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "cobblemonextrastructures:golems",
+  "criteria": {
+    "desert_ruins": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": [
+                  "cobblemonextrastructures:desert_ruins"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "desert_ruins"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:full_restore"
+    },
+    "title": {
+      "translate": "advancement.cobblemonextrastructures.pharmacy.title",
+      "fallback": "Pharmacy"
+    },
+    "description": {
+      "translate": "advancement.cobblemonextrastructures.pharmacy.description",
+      "fallback": "Find the pharmacy."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "cobblemonextrastructures:cobblemonextrastructures",
+  "criteria": {
+    "pharmacy": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "cobblemonextrastructures:pharmacy"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "pharmacy"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

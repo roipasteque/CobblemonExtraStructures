@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "cobblemonextrastructures:block/strange_rock_registeel" },
+    "facing=east": { "model": "cobblemonextrastructures:block/strange_rock_registeel", "y": 90 },
+    "facing=south": { "model": "cobblemonextrastructures:block/strange_rock_registeel", "y": 180 },
+    "facing=west": { "model": "cobblemonextrastructures:block/strange_rock_registeel", "y": 270 }
+  }
+}

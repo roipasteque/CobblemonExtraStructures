@@ -1,0 +1,46 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:packed_ice"
+    },
+    "title": {
+      "translate": "advancement.cobblemonextrastructures.island_cave.title",
+      "fallback": "Ice age"
+    },
+    "description": {
+      "translate": "advancement.cobblemonextrastructures.island_cave.description",
+      "fallback": "Step in the Island cave."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "cobblemonextrastructures:golems",
+  "criteria": {
+    "island_cave": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": [
+                  "cobblemonextrastructures:island_cave"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "island_cave"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

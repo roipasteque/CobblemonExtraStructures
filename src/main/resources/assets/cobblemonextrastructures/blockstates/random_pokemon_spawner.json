@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "cobblemonextrastructures:block/random_pokemon_spawner"
+    }
+  }
+}

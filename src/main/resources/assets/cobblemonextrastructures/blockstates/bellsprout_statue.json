@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "cobblemonextrastructures:block/bellsprout_statue" },
+    "facing=east": { "model": "cobblemonextrastructures:block/bellsprout_statue", "y": 90 },
+    "facing=south": { "model": "cobblemonextrastructures:block/bellsprout_statue", "y": 180 },
+    "facing=west": { "model": "cobblemonextrastructures:block/bellsprout_statue", "y": 270 }
+  }
+}

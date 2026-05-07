@@ -1,0 +1,7 @@
+{
+  "parent": "cobblemonextrastructures:block/base/strange_rock",
+  "textures": {
+    "0": "cobblemonextrastructures:block/strange_rock_regirock",
+    "particle": "minecraft:block/dripstone_block"
+  }
+}
