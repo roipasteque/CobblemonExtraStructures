@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.pastek.cobblemonextrastructures.ExtraStructures;
+import net.pastek.cobblemonextrastructures.common.block.*;
 
 public class EXBlocks {
 

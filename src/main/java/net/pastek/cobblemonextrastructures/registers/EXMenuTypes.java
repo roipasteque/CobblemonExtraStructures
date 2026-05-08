@@ -15,7 +15,7 @@ public class EXMenuTypes {
     public static final MenuType<PokemonSpawnerMenu> POKEMON_SPAWNER_MENU = Registry.register(
             BuiltInRegistries.MENU,
             ResourceLocation.fromNamespaceAndPath(ExtraStructures.MOD_ID, "pokemon_spawner_menu"),
-            new ExtendedScreenHandlerType<>(PokemonSpawnerMenu::new) // Fabric's equivalent for network-aware menus
+            new ExtendedScreenHandlerType<>(PokemonSpawnerMenu::new)
     );
 
     public static final MenuType<RandomPokemonSpawnerMenu> RANDOM_POKEMON_SPAWNER_MENU = Registry.register(
