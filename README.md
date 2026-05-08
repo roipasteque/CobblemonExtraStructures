@@ -7,6 +7,7 @@ Cobblemon Extra Structures is an addon for Cobblemon adding structures.
 Fabric version will consist of only the structure data until I manage to get the mappings working.
 If you wish to help develop the fabric version, please do, I need help :(
 
+
 Cobblemon Extra Structures CurseForge page
 ============
 https://www.curseforge.com/minecraft/mc-mods/cobblemon-extra-structures
