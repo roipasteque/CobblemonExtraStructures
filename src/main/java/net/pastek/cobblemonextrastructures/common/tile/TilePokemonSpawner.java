@@ -70,31 +70,31 @@ public class TilePokemonSpawner extends BlockEntity {
     public static void tick(Level level, BlockPos pos, BlockState state, TilePokemonSpawner entity) {
         if (level.isClientSide) return;
 
-        int configCooldown = EXConfigurationHandler.SPAWNER_COOLDOWN.get();
-
-        if (configCooldown == -1 && entity.hasSpawnedOnce) {
-            return;
-        }
-
         if (entity.currentCooldown > 0) {
             entity.currentCooldown--;
             return;
         }
 
-        AABB triggerBox = new AABB(pos).inflate(entity.triggerRadius);
-        List<Player> nearbyPlayers = level.getEntitiesOfClass(Player.class, triggerBox,
-                player -> !player.isCreative() && !player.isSpectator());
+        int configCooldown = EXConfigurationHandler.SPAWNER_COOLDOWN.get();
+        if (configCooldown == -1 && entity.hasSpawnedOnce) return;
 
-        if (!nearbyPlayers.isEmpty()) {
+        if (level.getGameTime() % 20 == 0) {
+
             if (entity.isSpawnAlive((ServerLevel) level)) {
                 entity.currentCooldown = 200;
                 return;
             }
 
-            entity.spawnPokemon();
-            entity.hasSpawnedOnce = true;
-            entity.currentCooldown = Math.max(0, configCooldown);
-            entity.setChanged();
+            AABB triggerBox = new AABB(pos).inflate(entity.triggerRadius);
+            List<Player> nearbyPlayers = level.getEntitiesOfClass(Player.class, triggerBox,
+                    player -> !player.isCreative() && !player.isSpectator());
+
+            if (!nearbyPlayers.isEmpty()) {
+                entity.spawnPokemon();
+                entity.hasSpawnedOnce = true;
+                entity.currentCooldown = Math.max(0, configCooldown);
+                entity.setChanged();
+            }
         }
     }
 

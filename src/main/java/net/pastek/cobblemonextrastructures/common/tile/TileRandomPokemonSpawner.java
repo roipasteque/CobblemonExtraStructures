@@ -68,22 +68,24 @@ public class TileRandomPokemonSpawner extends BlockEntity {
             return;
         }
 
-        if (entity.spawnEntries.isEmpty()) return;
+        if (level.getGameTime() % 20 == 0) {
+            if (entity.spawnEntries.isEmpty()) return;
 
-        AABB triggerBox = new AABB(pos).inflate(entity.triggerRadius);
-        List<Player> nearbyPlayers = level.getEntitiesOfClass(Player.class, triggerBox,
-                player -> !player.isCreative() && !player.isSpectator());
+            AABB triggerBox = new AABB(pos).inflate(entity.triggerRadius);
+            List<Player> nearbyPlayers = level.getEntitiesOfClass(Player.class, triggerBox,
+                    player -> !player.isCreative() && !player.isSpectator());
 
-        if (!nearbyPlayers.isEmpty()) {
-            if (entity.isSpawnAlive((ServerLevel) level)) {
-                entity.currentCooldown = 200;
-                return;
+            if (!nearbyPlayers.isEmpty()) {
+                if (entity.isSpawnAlive((ServerLevel) level)) {
+                    entity.currentCooldown = 200;
+                    return;
+                }
+
+                entity.spawnRandomPokemon();
+                entity.hasSpawnedOnce = true;
+                entity.currentCooldown = Math.max(0, configCooldown);
+                entity.setChanged();
             }
-
-            entity.spawnRandomPokemon();
-            entity.hasSpawnedOnce = true;
-            entity.currentCooldown = Math.max(0, configCooldown);
-            entity.setChanged();
         }
     }
 
